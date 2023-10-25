@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="accordion">
+        <button class="accordion-button" onclick="toggleAccordion(this)">Section 1</button>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae molestiae ad dolores aut ipsum dolorem
+                enim, debitis ullam laborum fuga earum corrupti minima repellat quo eveniet. Impedit, voluptate hic!
+                Incidunt!</p>
+        </div>
+
+        <button class="accordion-button" onclick="toggleAccordion(this)">Section 2</button>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe modi nulla exercitationem provident
+                asperiores sit vitae cupiditate delectus? Esse fugiat, harum laboriosam perspiciatis corporis odit enim
+                aspernatur nobis labore neque?</p>
+        </div>
+    </div>
+
+    <script>
+        let previousButton = null;
+
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            if (previousButton) {
+                const previousContent = previousButton.nextElementSibling;
+                previousContent.classList.remove("active");
+            }
+            content.classList.toggle("active");
+            previousButton = button;
+        }
+    </script>
+</body>
+
+</html>
