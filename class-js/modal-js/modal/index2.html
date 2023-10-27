@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <button id="minus" onclick="azalt()">-</button>
+        <span>0</span>
+        <button id="plus" onclick="artir()">+</button>
+        <input type="text">
+        <button>increase by amount</button>
+        <button>decrease by amount</button>
+    </div>
+    <script>
+        const minus = document.getElementById("minus")
+        const plus = document.getElementById("plus")
+
+        function azalt() {
+            minus.nextElementSibling.innerHTML--;
+            if (minus.nextElementSibling.innerHTML <= 0) minus.disabled = true;
+        }
+        function artir() {
+            minus.nextElementSibling.innerHTML++;
+            minus.disabled = false;
+        }
+        
+    </script>
+    <script>
+        const minus = document.getElementById("minus");
+        const plus = document.getElementById("plus");
+        const valueSpan = minus.nextElementSibling;
+        const amountInput = document.getElementById("amountInput");
+    
+        function decreaseValue() {
+            const currentValue = parseInt(valueSpan.innerHTML);
+            if (currentValue > 0) {
+                valueSpan.innerHTML = currentValue - 1;
+            }
+        }
+    
+        function increaseValue() {
+            const currentValue = parseInt(valueSpan.innerHTML);
+            valueSpan.innerHTML = currentValue + 1;
+        }
+    
+        function increaseByAmount() {
+            const amount = parseInt(amountInput.value);
+            const currentValue = parseInt(valueSpan.innerHTML);
+            valueSpan.innerHTML = currentValue + amount;
+        }
+    
+        function decreaseByAmount() {
+            const amount = parseInt(amountInput.value);
+            const currentValue = parseInt(valueSpan.innerHTML);
+            if (currentValue >= amount) {
+                valueSpan.innerHTML = currentValue - amount;
+            }
+        }
+    </script>
+</body>
+
+</html>

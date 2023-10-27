@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Film-Modal</title>
+
+</head>
+
+<body>
+    <nav id="nav">
+        <h1><a href="">RashFlix</a></h1>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Films</a></li>
+        </ul>
+        <button id="openModal">Add</button>
+    </nav>
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Add Movie</h2>
+            <input type="text" placeholder="Image URL" id="imageInput">
+            <input type="text" placeholder="Movie Name" id="nameInput">
+            <input type="text" placeholder="Select Genre" id="genreInput">
+            <button id="addButton">Add</button>
+            <button id="cancelButton">Cancel</button>
+            <button id="updateButton">Update</button>
+        </div>
+    </div>
+
+    <table class="tb" id="movieTable">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="./app.js"></script>
+</body>
+
+</html>
