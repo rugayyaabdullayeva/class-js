@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <button id="addProductButton">Add Product</button>
+        <button id="wishlistButton">Wishlist</button>
+    </nav>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <form id="productForm">
+                <label for="productId">ID:</label>
+                <input type="text" id="productId" >
+                <br>
+                <label for="productName">Name:</label>
+                <input type="text" id="productName" >
+                <br>
+                <label for="productCategory">Category:</label>
+                <input type="text" id="productCategory" >
+                <br>
+                <label for="productBrand">Brand:</label>
+                <input type="text" id="productBrand" >
+                <br>
+                <label for="productPrice">Price:</label>
+                <input type="number" id="productPrice" >
+                <br>
+                <button type="submit">Add to Wishlist</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="productContainer" class="container"></div>
+
+ 
+    <div id="wishlistOffcanvas" class="offcanvas">
+        <button id="closeWishlist">&times;</button>
+        <div id="wishlistItems" class="offcanvas-content"></div>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

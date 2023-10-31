@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 10px;
+}
+
+form {
+    padding-left: 40px;
+    width: 35%;
+}
